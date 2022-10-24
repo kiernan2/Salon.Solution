@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Salon.Models.Client
+
+<h2>Add a new Client</h2>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.ClientName)
+  @Html.TextBoxFor(model => model.ClientName)
+  <input type="submit" value="Add new Client" />
+}
+
+<p>@Html.ActionLink("Show all Clients", "Index")</p>
