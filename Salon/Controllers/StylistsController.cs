@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,7 @@ namespace Salon.Controllers
 
     public ActionResult Create()
     {
+      ViewBag.ClientId = new SelectList(_db.Clients, "ClientId", "ClientName");
       return View();
     }
 

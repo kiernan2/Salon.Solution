@@ -45,7 +45,7 @@ namespace Salon.Controllers
     public ActionResult Edit(int id)
     {
       Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
-      ViewBag.ClientId = new SelectList(_db.Stylists, "StylistId", "StylistName");
+      ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "StylistName");
       return View(thisClient);
     }
 
