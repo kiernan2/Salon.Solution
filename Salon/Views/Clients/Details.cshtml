@@ -9,18 +9,6 @@
 <hr />
 <h3>Name: @Html.DisplayFor(model => model.ClientName)</h3>
 
-<ul>
-  @if (@Model.StylistList.Count == 0)
-  {
-    <p>No Stylist found</p>
-  }
-
-  @foreach (Stylist stylist in @Model.StylistList)
-  {
-    <li>Stylist: @stylist.StylistName</li>
-  }
-</ul>
-
-<p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.ClientId})</p>
-<p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.ClientId})</p>
+<p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId})</p>
+<p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId})</p>
 <p>@Html.ActionLink("Back to list", "Index")</p>

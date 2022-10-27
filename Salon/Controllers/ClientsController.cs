@@ -18,7 +18,7 @@ namespace Salon.Controllers
 
     public ActionResult Index()
     {
-      List<Client> model = _db.Clients.Include(client => client.StylistList).ToList();
+      List<Client> model = _db.Clients.Include(client => client.Stylist).ToList();
       return View(model);
     }
 
@@ -50,9 +50,9 @@ namespace Salon.Controllers
     }
 
     [HttpPost]
-    public ActionResult Edit(Stylist stylist)
+    public ActionResult Edit(Client client)
     {
-      _db.Entry(stylist).State = EntityState.Modified;
+      _db.Entry(client).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
