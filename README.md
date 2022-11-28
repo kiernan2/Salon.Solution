@@ -17,15 +17,15 @@
 
 ## Setup/Installation Requirements
 
-* Import the database from the provided file
+* Import the database from the provided file (open Mysql Workbench, Navigate data import/restore, Select import from self-contained file, target the file "Kiernan_Beattie.sql")
 * Create a appropriate appsettings.jason With a connection string IE
 {
     "ConnectionStrings": {
-        "DefaultConnection": "Server=localhost;Port=3306;database=to_do_list;uid=root;pwd=<YOUR-PASSWORD-HERE>;"
+        "DefaultConnection": "Server=localhost;Port=3306;database=salon;uid=root;pwd=<YOUR-PASSWORD-HERE>;"
     }
 }
 * Connect to MySQL
-* Open a terminal and cd to (Wherever you put the file)/HairSalon
+* Open a terminal and cd to "(Wherever you put the file)/HairSalon"
 * Enter dotnet run
 
 
