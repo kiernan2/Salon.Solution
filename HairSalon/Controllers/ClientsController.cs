@@ -30,7 +30,8 @@ namespace Salon.Controllers
 
     public ActionResult Create()
     {
-      ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "StylistName");
+      SelectList stylistList = new SelectList(_db.Stylists, "StylistId", "StylistName");
+      ViewBag.StylistId = (stylistList.Count() == 0) ? null : stylistList;
       return View();
     }
 
